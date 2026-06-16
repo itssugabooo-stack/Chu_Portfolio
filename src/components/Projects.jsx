@@ -1,8 +1,8 @@
-import { githubRepoUrl, vercelUrl } from "../data/profile"
+import { githubRepoUrl, githubUrl } from "../data/profile"
 
 const projects = [
   {
-    title: "AI Study Assistant",
+    title: "AI Study Assistant Platform (In Progress)",
     type: "Learning Analytics Dashboard",
     tech: ["React", "Vite", "Tailwind CSS", "AI Tutor UI"],
     desc: "A responsive frontend for an AI-powered learning analytics and personalized study assistant platform with dashboard, quiz, roadmap, and tutor chat views.",
@@ -65,12 +65,12 @@ function Projects() {
           </div>
 
           <a
-            href={vercelUrl}
+            href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"
           >
-            View Deployments
+            View GitHub
           </a>
         </div>
 

@@ -1,5 +1,5 @@
 import heroImage from "../assets/hero.png"
-import { cvUrl, githubUrl, vercelUrl } from "../data/profile"
+import { cvUrl, githubUrl } from "../data/profile"
 
 const highlights = [
   "React / Next.js",
@@ -34,14 +34,6 @@ function Hero() {
           >
             GitHub
           </a>
-          <a
-            className="nav-link"
-            href={vercelUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vercel
-          </a>
           <a className="nav-link" href={cvUrl} target="_blank">
             CV
           </a>
@@ -58,8 +50,10 @@ function Hero() {
           <h1>Chu Theint Theint</h1>
 
           <p className="hero-text">
-            I build responsive web interfaces and practical student projects
-            with React, APIs, and clean frontend workflows.
+            Computer Science student focused on React.js, frontend development,
+            and practical software projects. Currently seeking internship
+            opportunities to gain industry experience and contribute to
+            real-world applications.
           </p>
 
           <div className="hero-actions">

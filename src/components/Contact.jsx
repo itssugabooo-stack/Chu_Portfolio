@@ -1,12 +1,9 @@
-import {
-  cvUrl,
-  githubDisplay,
-  githubUrl,
-  vercelDisplay,
-  vercelUrl,
-} from "../data/profile"
+import { cvUrl, githubDisplay, githubUrl } from "../data/profile"
 
 const email = "its.sugabooo@gmail.com"
+const emailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+  "Portfolio Contact",
+)}`
 const phone = "+66981957523"
 const phoneLabel = "+66 98 195 7523"
 
@@ -14,8 +11,9 @@ const contactMethods = [
   {
     label: "Email",
     value: email,
-    href: `mailto:${email}`,
+    href: emailUrl,
     helper: "Best for internships, entry-level roles, and collaboration.",
+    external: true,
   },
   {
     label: "Phone",
@@ -28,13 +26,6 @@ const contactMethods = [
     value: githubDisplay,
     href: githubUrl,
     helper: "See my projects, code, and current learning work.",
-    external: true,
-  },
-  {
-    label: "Vercel",
-    value: vercelDisplay,
-    href: vercelUrl,
-    helper: "View my deployed projects and frontend previews.",
     external: true,
   },
   {
@@ -60,7 +51,12 @@ function Contact() {
           </p>
 
           <div className="hero-actions">
-            <a className="btn btn-primary" href={`mailto:${email}`}>
+            <a
+              className="btn btn-primary"
+              href={emailUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Email Me
             </a>
             <a
@@ -70,14 +66,6 @@ function Contact() {
               rel="noopener noreferrer"
             >
               View GitHub
-            </a>
-            <a
-              className="btn btn-secondary"
-              href={vercelUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Vercel
             </a>
             <a className="btn btn-ghost" href={cvUrl} target="_blank">
               View CV
@@ -93,7 +81,7 @@ function Contact() {
             </div>
             <span className="status-pill">
               <span></span>
-              Available
+              Available for Internship.
             </span>
           </div>
 

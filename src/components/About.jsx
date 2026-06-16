@@ -1,7 +1,7 @@
 const infoItems = [
   ["Name", "Chu Theint Theint"],
   ["Role", "Computer Science Student"],
-  ["Interest", "Software Development"],
+  ["Focus", "Web Development"],
   ["Goal", "Internship and Entry-Level Opportunities"],
 ]
 
@@ -14,6 +14,7 @@ const focusItems = [
 const education = {
   degree: "Bachelor of Science in Computer Science (B.Sc. in Computer Science)",
   school: "Rangsit University",
+  gpa: "Current GPA: 3.00 / 4.00",
 }
 
 function About() {
@@ -29,13 +30,10 @@ function About() {
 
           <div className="prose-block">
             <p>
-              I am a Computer Science student with a strong interest in
-              technology, software development, and continuous learning.
-            </p>
-
-            <p>
-              I enjoy solving problems, learning new tools, and turning ideas
-              into interfaces that feel clear and useful.
+              I am a Computer Science student at Rangsit University with
+              interests in frontend development, software engineering, and
+              data-driven applications. I enjoy building practical projects and
+              continuously improving my technical skills.
             </p>
           </div>
         </div>
@@ -57,6 +55,7 @@ function About() {
             <span>Education</span>
             <strong>{education.degree}</strong>
             <p>{education.school}</p>
+            <p>{education.gpa}</p>
           </div>
 
           <div className="focus-list">
