@@ -1,4 +1,4 @@
-import { githubRepoUrl, githubUrl } from "../data/profile"
+import { githubRepoUrl, vercelUrl } from "../data/profile"
 
 const projects = [
   {
@@ -65,12 +65,12 @@ function Projects() {
           </div>
 
           <a
-            href={githubUrl}
+            href={vercelUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"
           >
-            View All on GitHub
+            View Deployments
           </a>
         </div>
 

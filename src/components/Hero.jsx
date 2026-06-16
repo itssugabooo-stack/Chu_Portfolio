@@ -1,5 +1,5 @@
 import heroImage from "../assets/hero.png"
-import { cvUrl, githubUrl } from "../data/profile"
+import { cvUrl, githubUrl, vercelUrl } from "../data/profile"
 
 const highlights = [
   "React / Next.js",
@@ -33,6 +33,14 @@ function Hero() {
             rel="noopener noreferrer"
           >
             GitHub
+          </a>
+          <a
+            className="nav-link"
+            href={vercelUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Vercel
           </a>
           <a className="nav-link" href={cvUrl} target="_blank">
             CV
