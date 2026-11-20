@@ -1,0 +1,43 @@
+PORTFOLIO PREVIEW AND VERCEL DEPLOYMENT
+
+The actual files in C:\Portfolio have been updated. No ZIP extraction is needed.
+Original working files: C:\Portfolio-backup-20261120-124837.
+The earliest Git commit (fef0955) was used to verify the original design.
+
+Preview:
+  cd C:\Portfolio
+  npm run dev
+Open the Local URL shown in the terminal.
+
+Production check:
+  npm ci
+  npm run build
+  npm run preview
+
+Vercel:
+Commit and push reviewed changes to the production branch connected to your
+existing Vercel project. Framework: Vite. Build: npm run build. Output: dist.
+Alternatively run npx vercel, select the existing project, check the preview,
+then run npx vercel --prod when ready to publish.
+The existing GitHub repository is itssugabooo-stack/Chu_Portfolio.
+Its main branch is connected to automatic Vercel production deployments.
+Production website: https://chu-portfolio-five.vercel.app/
+
+CV:
+  Editable source: cv-source\Chu_Theint_Theint_CV.docx
+  Website PDF: public\cv.pdf
+  Export: python scripts\export-cv.py
+  Dependencies: python -m pip install python-docx "reportlab<4.4"
+Original Downloads files are unchanged. All CV links use /cv.pdf.
+The one-page PDF has selectable text and clickable contact links.
+
+Date clarification:
+User supplied December 2026 as the internship end month. Because today is
+November 20, 2026, the website and CV say expected end. Update after completion.
+
+Verification:
+Chrome checks at 320, 390, 768, 1024, and 1440px: mobile menu links and Escape,
+no horizontal overflow, no JavaScript runtime errors.
+GitHub repositories inspected using GitHub API and raw source files.
+LinkedIn blocks automated requests (999); the supplied URL is retained.
+Email and phone match the supplied CV; delivery and calls were not tested.

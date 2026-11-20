@@ -1,21 +1,15 @@
 const infoItems = [
   ["Name", "Chu Theint Theint"],
-  ["Role", "Computer Science Student"],
-  ["Focus", "Web Development"],
-  ["Goal", "Internship and Entry-Level Opportunities"],
+  ["Role", "Computer Science Student / Early-Career Developer"],
+  ["Focus", "Frontend, Mobile & Software Development"],
+  ["Seeking", "Junior and Entry-Level Roles"],
 ]
 
 const focusItems = [
-  "Designing responsive interfaces that are simple to scan and use.",
-  "Building projects with React, Next.js, APIs, and modern tooling.",
-  "Improving through teamwork, feedback, and practical problem solving.",
+  "Building user-friendly interfaces with React.js and responsive CSS.",
+  "Developing Flutter mobile foundations and preparing API integrations.",
+  "Collaborating through Git, pull requests, debugging, and testing.",
 ]
-
-const education = {
-  degree: "Bachelor of Science in Computer Science (B.Sc. in Computer Science)",
-  school: "Rangsit University",
-  gpa: "Current GPA: 3.00 / 4.00",
-}
 
 function About() {
   return (
@@ -23,17 +17,18 @@ function About() {
       <div className="section-inner about-grid">
         <div>
           <p className="eyebrow">About Me</p>
-
-          <h2 className="section-title">
-            Curious, steady, and ready to grow.
-          </h2>
-
+          <h2 className="section-title">Curious, steady, and ready to grow.</h2>
           <div className="prose-block">
             <p>
-              I am a Computer Science student at Rangsit University with
-              interests in frontend development, software engineering, and
-              data-driven applications. I enjoy building practical projects and
-              continuously improving my technical skills.
+              I am a Computer Science student at Rangsit University with practical
+              experience in React.js, Flutter, REST APIs, and collaborative development.
+              As a Flutter mobile developer on the RSU Shuttle Bus Monitoring project,
+              I have worked on the application foundation, domain models, and emulator testing.
+            </p>
+            <p>
+              I am completing my coursework in December 2026 and will officially graduate
+              in 2027. I am preparing for full-time junior frontend, Flutter, software development, or entry-level IT
+              opportunities where I can contribute and continue learning.
             </p>
           </div>
         </div>
@@ -43,26 +38,20 @@ function About() {
             <h3>Quick Info</h3>
             <dl className="info-list">
               {infoItems.map(([label, value]) => (
-                <div key={label}>
-                  <dt>{label}</dt>
-                  <dd>{value}</dd>
-                </div>
+                <div key={label}><dt>{label}</dt><dd>{value}</dd></div>
               ))}
             </dl>
           </div>
-
           <div className="education-summary">
             <span>Education</span>
-            <strong>{education.degree}</strong>
-            <p>{education.school}</p>
-            <p>{education.gpa}</p>
+            <strong>Bachelor of Science in Computer Science</strong>
+            <p>Rangsit University, Thailand</p>
+            <p>Coursework Completion: December 2026</p>
+            <p>Expected Graduation: 2027</p>
           </div>
-
           <div className="focus-list">
-            <h3>What I Focus On</h3>
-            {focusItems.map((item) => (
-              <p key={item}>{item}</p>
-            ))}
+            <h3>What I Work On</h3>
+            {focusItems.map((item) => <p key={item}>{item}</p>)}
           </div>
         </div>
       </div>

@@ -1,59 +1,95 @@
 const skillGroups = [
   {
-    title: "Programming",
-    description: "Languages and programming foundations from my CV.",
-    items: ["Python", "C#", "JavaScript", "Object-Oriented Programming (OOP)"],
+    "title": "Programming",
+    "description": "Technologies used in coursework and projects.",
+    "items": [
+      "JavaScript",
+      "Python",
+      "Dart",
+      "C#",
+      "SQL"
+    ]
   },
   {
-    title: "Frontend and Web",
-    description: "Skills used for responsive web interface development.",
-    items: ["React.js", "HTML/CSS", "Tailwind CSS", "Web Development"],
+    "title": "Frontend",
+    "description": "Technologies used in coursework and projects.",
+    "items": [
+      "React.js",
+      "HTML",
+      "CSS",
+      "Tailwind CSS"
+    ]
   },
   {
-    title: "Database and APIs",
-    description: "Data, backend, and integration skills listed in my CV.",
-    items: [
-      "SQL",
-      "Database Design & Management",
-      "REST APIs",
-      "API Integration",
-    ],
+    "title": "Mobile",
+    "description": "Technologies used in coursework and projects.",
+    "items": [
+      "Flutter",
+      "Android Emulator"
+    ]
   },
   {
-    title: "Tools and Vision",
-    description: "Development tools and computer vision technologies.",
-    items: ["Git", "GitHub", "Version Control", "OpenCV", "MediaPipe"],
+    "title": "Backend",
+    "description": "Technologies used in coursework and projects.",
+    "items": [
+      "Node.js",
+      "Express.js",
+      "REST APIs"
+    ]
   },
   {
-    title: "Software Practice",
-    description: "Core software development and collaboration strengths.",
-    items: [
-      "Software Development",
-      "Debugging & Troubleshooting",
-      "Problem Solving",
-      "Team Collaboration",
-    ],
+    "title": "Database & ORM",
+    "description": "Technologies used in coursework and projects.",
+    "items": [
+      "PostgreSQL",
+      "MySQL",
+      "Prisma"
+    ]
   },
   {
-    title: "Languages",
-    description: "Language skills from my CV.",
-    items: ["English (Fluently)", "Burmese (Native)", "Thai (Basic)"],
+    "title": "Tools",
+    "description": "Technologies used in coursework and projects.",
+    "items": [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Docker",
+      "Postman"
+    ]
   },
+  {
+    "title": "Computer Vision",
+    "description": "Technologies used in coursework and projects.",
+    "items": [
+      "OpenCV",
+      "MediaPipe"
+    ]
+  },
+  {
+    "title": "Software Practice",
+    "description": "Technologies used in coursework and projects.",
+    "items": [
+      "Debugging",
+      "Object-Oriented Programming",
+      "Team Collaboration"
+    ]
+  },
+  {
+    "title": "Spoken Languages",
+    "description": "Communication.",
+    "items": [
+      "Burmese (Native)",
+      "English (Fluent)",
+      "Thai (Basic)"
+    ]
+  }
 ]
 
 function SkillCard({ title, description, items }) {
   return (
     <article className="panel skill-card">
-      <h3>{title}</h3>
-      <p>{description}</p>
-
-      <div className="chip-list">
-        {items.map((item) => (
-          <span className="chip" key={item}>
-            {item}
-          </span>
-        ))}
-      </div>
+      <h3>{title}</h3><p>{description}</p>
+      <div className="chip-list">{items.map((item) => <span className="chip" key={item}>{item}</span>)}</div>
     </article>
   )
 }
@@ -62,16 +98,8 @@ function Skills() {
   return (
     <section id="skills" className="site-section">
       <div className="section-inner">
-        <div className="section-heading">
-          <p className="eyebrow">Skills</p>
-          <h2 className="section-title">Technical Skills</h2>
-        </div>
-
-        <div className="skills-grid">
-          {skillGroups.map((group) => (
-            <SkillCard key={group.title} {...group} />
-          ))}
-        </div>
+        <div className="section-heading"><p className="eyebrow">Skills</p><h2 className="section-title">Technical Skills</h2></div>
+        <div className="skills-grid">{skillGroups.map((group) => <SkillCard key={group.title} {...group} />)}</div>
       </div>
     </section>
   )
